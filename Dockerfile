@@ -23,7 +23,7 @@ ENV BASE_PATH $BASE_PATH
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN yarn build-docker
+RUN DATABASE_URL="postgresql://dummy" yarn build
 
 # Production image, copy all the files and run next
 FROM node:22-alpine AS runner
