@@ -23,6 +23,7 @@ ENV BASE_PATH $BASE_PATH
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
+ENV SKIP_DB_CHECK=true
 RUN DATABASE_URL="postgresql://dummy" yarn build
 
 # Production image, copy all the files and run next
